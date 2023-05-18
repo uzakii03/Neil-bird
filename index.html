@@ -55,10 +55,10 @@ img.src = "https://i.ibb.co/Q9yv5Jk/flappy-bird-set.png";
 
 // general settings
 let gamePlaying = false;
-const gravity = .5;
-const speed = 2;
+const gravity = 2; //.5
+const speed = 10; //2
 const size = [51, 36];
-const jump = -11.5;
+const jump = -9.5; //11.5
 const cTenth = (canvas.width / 10);
 
 let index = 0,
@@ -154,7 +154,10 @@ setup();
 img.onload = render;
 
 // start game
+document.addEventListener('touchstart', () => gamePlaying = true);
+
 document.addEventListener('click', () => gamePlaying = true);
+
 window.onclick = () => flight = jump;
 	</script>
 </body>
